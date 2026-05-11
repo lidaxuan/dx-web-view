@@ -16,7 +16,7 @@ const goResume = () => router.push('/resume')
   <main class="min-h-screen bg-gradient-to-br
     from-slate-100/90 via-white to-emerald-50/40
     dark:from-zinc-950 dark:via-zinc-900 dark:to-emerald-950/20
-    pt-6 pb-20 px-4 sm:px-6 transition-all duration-500">
+    pt-6 pb-10 px-4 sm:px-6 transition-all duration-500">
 
     <div class="mx-auto max-w-5xl">
       <!-- 切换按钮 -->
@@ -42,8 +42,7 @@ const goResume = () => router.push('/resume')
 
       <!-- PC 端：完整展示1 -->
       <div v-if="!isMobileView" class="transition-opacity">
-        <div class="text-center mb-16">
-          <h1 class="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white">{{ config.title }}</h1>
+        <div class="text-center mb-8">
           <p class="text-lg text-slate-600 dark:text-slate-300 mt-2">{{ config.subtitle }}</p>
         </div>
 
