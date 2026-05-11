@@ -27,31 +27,12 @@
         </div>
       </nav>
 
-      <!-- Theme toggle -->
       <div class="flex shrink-0 items-center">
         <button type="button" :title="isDark ? '浅色' : '深色'" :aria-label="isDark ? '切换到浅色主题' : '切换到深色主题'"
                 @click="toggleTheme"
-                class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-background-soft)] text-[color:var(--color-heading)] shadow-sm transition hover:border-[color:var(--color-border-hover)] hover:bg-[color:var(--color-background-mute)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/60 dark:border-white/10 dark:bg-white/[0.06] dark:hover:bg-white/[0.1]">
-          <!-- Sun -->
-          <svg v-if="isDark" class="h-[18px] w-[18px] text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"/>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-          </svg>
-          <!-- Moon -->
-          <svg
-                  v-else
-                  class="h-[18px] w-[18px] text-slate-600 dark:text-slate-300"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-          >
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
+                class="h-9 w-9 rounded-full  border-[color:var(--color-border)] bg-[color:var(--color-background-soft)] text-[color:var(--color-heading)] shadow-sm transition hover:border-[color:var(--color-border-hover)] hover:bg-[color:var(--color-background-mute)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/60 dark:bg-white/[0.06] dark:hover:bg-white/[0.1]">
+          <img v-if="isDark" src="@/assets/images/sun.png" alt="">
+          <img  v-else src="@/assets/images/moon.png" alt="">
         </button>
       </div>
     </div>

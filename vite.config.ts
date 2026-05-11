@@ -4,6 +4,9 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    host: true  // 开启局域网IP访问
+  },
   plugins: [
     vue(),
   ],

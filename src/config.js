@@ -1,33 +1,6 @@
-/**
- * 主页 Bento 区块配置：文案、链接、下方卡片顺序都可以只改这里。
- * @typedef {{ kind: 'pdf' | 'github' | 'email'; href: string; ariaLabel: string; title?: string }} ProfileLink
- */
 
 const workYears = new Date().getFullYear() - 2017;
 
-
-/** @type {{
- *   hint?: string
- *   profile: {
- *     avatarEmoji: string
- *     name: string
- *     tagline: string
- *     bio: string
- *     resumeHint: string
- *     badgeLabel: string
- *     resumePath: string
- *     openResumeAriaLabel: string
- *     links: ProfileLink[]
- *   }
- *   blocks: Array<
- *   | { type: 'stat'; key: string; gridClass?: string; label: string; value: string; description: string }
- *   | { type: 'tags'; key: string; gridClass?: string; title: string; tags: string[] }
- *   | { type: 'project'; key: string; gridClass?: string; eyebrow: string; title: string; description: string; linkTo: string; cta: string }
- *   | { type: 'status'; key: string; gridClass?: string; title: string; value: string; subtitle: string }
- *   | { type: 'note'; key: string; gridClass?: string; eyebrow: string; title: string; accent: string; variant?: 'notion' }
- *   | { type: 'time'; key: string; gridClass?: string; title: string }
- *   >
- * }} */
 export const homePageConfig = {
 
 // 💡 职业关键词：
@@ -145,10 +118,6 @@ export const codeHeartConfig = {
              我始终认为：技术是工具，体验是核心，靠谱是底色。
              不跟风内卷，不浮夸炫技，只专注把每一行代码写干净，把每一个产品做好用。
              以匠心写代码，以初心做产品。`,
-  buttons: {
-    home: "← 返回首页",
-    resume: "查看完整简历"
-  }
 }
 
 export const resumePageConfig = {
@@ -245,4 +214,62 @@ export const resumePageConfig = {
       text: "9年前端开发经验，从基础页面开发成长为框架设计者与技术负责人。擅长工程化搭建、组件库封装、复杂可视化与性能优化，具备独立解决疑难问题的能力。注重团队协作与技术分享，持续深耕前端领域，追求代码优雅与产品极致体验。"
     }
   }
+}
+
+// ==============================
+// 项目页面 配置数据
+// ==============================
+export const projectsConfig = {
+  pageDesc: "企业实战沉淀 · 个人原创探索",
+  workLabel: "企业实战",
+  personalLabel: "个人原创",
+  list: [
+    // 公司项目
+    {
+      id: 1,
+      title: "前端通用工程化框架",
+      desc: "从0搭建企业级Vue2通用框架，统一请求、路由、权限，替代iframe通信，全团队落地使用，提升开发效率50%",
+      tags: ["Vue2", "Webpack", "工程化", "架构设计"],
+      type: "work"
+    },
+    {
+      id: 2,
+      title: "AI流程可视化中台",
+      desc: "基于GoJS封装流程图编辑器，支持百节点渲染、拖拽、连线，模块化对话逻辑，支撑核心AI机器人业务",
+      tags: ["Vue2", "GoJS", "可视化", "性能优化"],
+      type: "work"
+    },
+    {
+      id: 3,
+      title: "企业公共组件库",
+      desc: "ElementUI二次封装 + 自研业务组件，包含表格、表单、弹窗等20+组件，团队复用率100%",
+      tags: ["Vue", "组件化", "UI封装", "团队协作"],
+      type: "work"
+    },
+    // 个人项目
+    {
+      id: 4,
+      title: "个人作品集网站",
+      desc: "Vue3 + Tailwind 开发，支持主题切换、毛玻璃效果、响应式布局，纯前端工程化最佳实践",
+      tags: ["Vue3", "Vite", "Tailwind", "深色模式"],
+      github: "https://github.com/",
+      type: "personal"
+    },
+    {
+      id: 5,
+      title: "手写Vue响应式原理",
+      desc: "原生JS实现数据劫持、依赖收集、视图更新，深入理解MVVM核心机制",
+      tags: ["JavaScript", "Vue原理", "响应式"],
+      github: "https://github.com/",
+      type: "personal"
+    },
+    {
+      id: 6,
+      title: "前端工具函数库",
+      desc: "封装日常开发高频工具函数，发布npm私有库，包含格式化、防抖、存储、校验等能力",
+      tags: ["JS", "NPM", "工具库", "模块化"],
+      github: "https://github.com/",
+      type: "personal"
+    }
+  ]
 }

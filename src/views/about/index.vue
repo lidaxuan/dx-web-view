@@ -78,10 +78,6 @@ const goResume = () => router.push('/resume')
           </div>
         </section>-->
 
-        <div class="flex justify-center gap-4">
-          <button @click="goHome" class="px-6 py-2.5 rounded-xl border transition">{{ config.buttons.home }}</button>
-          <button @click="goResume" class="px-6 py-2.5 rounded-xl bg-emerald-400/15 border transition">{{ config.buttons.resume }}</button>
-        </div>
       </div>
 
       <!-- 移动端：简化展示（共用同一套数据） -->
@@ -115,10 +111,6 @@ const goResume = () => router.push('/resume')
               </div>
             </div>
 
-            <div class="flex justify-center gap-3 mt-6">
-              <button @click="goHome" class="px-3 py-1.5 rounded-lg text-xs border">{{ config.buttons.home }}</button>
-              <button @click="goResume" class="px-3 py-1.5 rounded-lg text-xs bg-emerald-400/15">{{ config.buttons.resume }}</button>
-            </div>
           </div>
         </div>
       </div>
