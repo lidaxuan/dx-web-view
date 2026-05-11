@@ -40,7 +40,7 @@ const goResume = () => router.push('/resume')
         </button>
       </div>
 
-      <!-- PC 端：完整展示 -->
+      <!-- PC 端：完整展示1 -->
       <div v-if="!isMobileView" class="transition-opacity">
         <div class="text-center mb-16">
           <h1 class="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white">{{ config.title }}</h1>
