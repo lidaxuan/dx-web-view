@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import {ref} from 'vue'
+import {useRouter} from 'vue-router'
 
 const router = useRouter()
 // 折叠控制
@@ -24,7 +24,7 @@ const goCodeHeart = () => router.push('/codeheart')
         <div class="flex flex-col sm:flex-row items-center gap-6">
           <!-- 照片：替换成你现在的照片 -->
           <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-emerald-400/30 shadow-lg">
-            <img src="@/assets/images/me.jpeg" alt="李继玄" class="w-full h-full object-cover">
+            <img src="@/assets/images/me.jpeg" alt="李继玄" class="header-img w-full h-full object-cover">
           </div>
           <!-- 基本信息 -->
           <div class="text-center sm:text-left">
@@ -190,5 +190,20 @@ const goCodeHeart = () => router.push('/codeheart')
 /* 统一卡片hover */
 div:hover {
   transition: all 0.3s ease;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(359deg)
+  }
+}
+
+.header-img:hover {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  animation: rotate 3s linear infinite;
 }
 </style>
